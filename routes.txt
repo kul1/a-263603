@@ -1,0 +1,165 @@
+              Prefix Verb   URI Pattern                                       Controller#Action
+               jinda        /jinda                                            Jinda::Engine
+       jinda_pending GET    /jinda/pending(.:format)                          jinda#pending
+        jinda_status GET    /jinda/status(.:format)                           jinda#status
+        jinda_search GET    /jinda/search(.:format)                           jinda#search
+           jinda_doc GET    /jinda/doc(.:format)                              jinda#doc
+     jinda_doc_print GET    /jinda/doc_print(.:format)                        jinda#doc_print
+          jinda_logs GET    /jinda/logs(.:format)                             jinda#logs
+   jinda_ajax_notice GET    /jinda/ajax_notice(.:format)                      jinda#ajax_notice
+          jinda_init GET    /jinda/init(.:format)                             jinda#init
+           jinda_run GET    /jinda/run(.:format)                              jinda#run
+      jinda_run_mail GET    /jinda/run_mail(.:format)                         jinda#run_mail
+      jinda_document GET    /jinda/document(.:format)                         jinda#document
+        jinda_run_do GET    /jinda/run_do(.:format)                           jinda#run_do
+      jinda_run_form GET    /jinda/run_form(.:format)                         jinda#run_form
+      jinda_end_form GET    /jinda/end_form(.:format)                         jinda#end_form
+  jinda_run_redirect GET    /jinda/run_redirect(.:format)                     jinda#run_redirect
+ jinda_run_direct_to GET    /jinda/run_direct_to(.:format)                    jinda#run_direct_to
+        jinda_run_if GET    /jinda/run_if(.:format)                           jinda#run_if
+    jinda_error_logs GET    /jinda/error_logs(.:format)                       jinda#error_logs
+   jinda_notice_logs GET    /jinda/notice_logs(.:format)                      jinda#notice_logs
+        jinda_cancel GET    /jinda/cancel(.:format)                           jinda#cancel
+    jinda_run_output GET    /jinda/run_output(.:format)                       jinda#run_output
+    jinda_end_output GET    /jinda/end_output(.:format)                       jinda#end_output
+                     POST   /jinda/init(.:format)                             jinda#init
+                     POST   /jinda/pending(.:format)                          jinda#index
+                     POST   /jinda/end_form(.:format)                         jinda#end_form
+                     POST   /jinda/end_output(.:format)                       jinda#end_output
+                     POST   /auth/:provider/callback(.:format)                sessions#create
+                     GET    /auth/:provider/callback(.:format)                sessions#create
+        auth_failure GET    /auth/failure(.:format)                           sessions#destroy
+              logout GET    /logout(.:format)                                 sessions#destroy
+         articles_my GET    /articles/my(.:format)                            articles#my
+ articles_my_destroy GET    /articles/my/destroy(.:format)                    articles#destroy
+       articles_show GET    /articles/show(.:format)                          articles#show
+       articles_edit GET    /articles/edit(.:format)                          articles#edit
+             docs_my GET    /docs/my(.:format)                                docs#my
+            notes_my GET    /notes/my(.:format)                               notes#my
+     docs_my_destroy GET    /docs/my/destroy(.:format)                        docs#destroy
+                     GET    /notes/my/destroy/:id(.:format)                   notes#destroy
+                     GET    /notes/destroy/:id(.:format)                      notes#destroy
+                     GET    /jinda/document/:id(.:format)                     jinda#document
+    article_comments GET    /articles/:article_id/comments(.:format)          comments#index
+                     POST   /articles/:article_id/comments(.:format)          comments#create
+ new_article_comment GET    /articles/:article_id/comments/new(.:format)      comments#new
+edit_article_comment GET    /articles/:article_id/comments/:id/edit(.:format) comments#edit
+     article_comment GET    /articles/:article_id/comments/:id(.:format)      comments#show
+                     PATCH  /articles/:article_id/comments/:id(.:format)      comments#update
+                     PUT    /articles/:article_id/comments/:id(.:format)      comments#update
+                     DELETE /articles/:article_id/comments/:id(.:format)      comments#destroy
+            articles GET    /articles(.:format)                               articles#index
+                     POST   /articles(.:format)                               articles#create
+         new_article GET    /articles/new(.:format)                           articles#new
+        edit_article GET    /articles/:id/edit(.:format)                      articles#edit
+             article GET    /articles/:id(.:format)                           articles#show
+                     PATCH  /articles/:id(.:format)                           articles#update
+                     PUT    /articles/:id(.:format)                           articles#update
+                     DELETE /articles/:id(.:format)                           articles#destroy
+            comments GET    /comments(.:format)                               comments#index
+                     POST   /comments(.:format)                               comments#create
+         new_comment GET    /comments/new(.:format)                           comments#new
+        edit_comment GET    /comments/:id/edit(.:format)                      comments#edit
+             comment GET    /comments/:id(.:format)                           comments#show
+                     PATCH  /comments/:id(.:format)                           comments#update
+                     PUT    /comments/:id(.:format)                           comments#update
+                     DELETE /comments/:id(.:format)                           comments#destroy
+               notes GET    /notes(.:format)                                  notes#index
+                     POST   /notes(.:format)                                  notes#create
+            new_note GET    /notes/new(.:format)                              notes#new
+           edit_note GET    /notes/:id/edit(.:format)                         notes#edit
+                note GET    /notes/:id(.:format)                              notes#show
+                     PATCH  /notes/:id(.:format)                              notes#update
+                     PUT    /notes/:id(.:format)                              notes#update
+                     DELETE /notes/:id(.:format)                              notes#destroy
+                docs GET    /docs(.:format)                                   docs#index
+                     POST   /docs(.:format)                                   docs#create
+             new_doc GET    /docs/new(.:format)                               docs#new
+            edit_doc GET    /docs/:id/edit(.:format)                          docs#edit
+                 doc GET    /docs/:id(.:format)                               docs#show
+                     PATCH  /docs/:id(.:format)                               docs#update
+                     PUT    /docs/:id(.:format)                               docs#update
+                     DELETE /docs/:id(.:format)                               docs#destroy
+               users GET    /users(.:format)                                  users#index
+                     POST   /users(.:format)                                  users#create
+            new_user GET    /users/new(.:format)                              users#new
+           edit_user GET    /users/:id/edit(.:format)                         users#edit
+                user GET    /users/:id(.:format)                              users#show
+                     PATCH  /users/:id(.:format)                              users#update
+                     PUT    /users/:id(.:format)                              users#update
+                     DELETE /users/:id(.:format)                              users#destroy
+          identities GET    /identities(.:format)                             identities#index
+                     POST   /identities(.:format)                             identities#create
+        new_identity GET    /identities/new(.:format)                         identities#new
+       edit_identity GET    /identities/:id/edit(.:format)                    identities#edit
+            identity GET    /identities/:id(.:format)                         identities#show
+                     PATCH  /identities/:id(.:format)                         identities#update
+                     PUT    /identities/:id(.:format)                         identities#update
+                     DELETE /identities/:id(.:format)                         identities#destroy
+            sessions GET    /sessions(.:format)                               sessions#index
+                     POST   /sessions(.:format)                               sessions#create
+         new_session GET    /sessions/new(.:format)                           sessions#new
+        edit_session GET    /sessions/:id/edit(.:format)                      sessions#edit
+             session GET    /sessions/:id(.:format)                           sessions#show
+                     PATCH  /sessions/:id(.:format)                           sessions#update
+                     PUT    /sessions/:id(.:format)                           sessions#update
+                     DELETE /sessions/:id(.:format)                           sessions#destroy
+     password_resets GET    /password_resets(.:format)                        password_resets#index
+                     POST   /password_resets(.:format)                        password_resets#create
+  new_password_reset GET    /password_resets/new(.:format)                    password_resets#new
+ edit_password_reset GET    /password_resets/:id/edit(.:format)               password_resets#edit
+      password_reset GET    /password_resets/:id(.:format)                    password_resets#show
+                     PATCH  /password_resets/:id(.:format)                    password_resets#update
+                     PUT    /password_resets/:id(.:format)                    password_resets#update
+                     DELETE /password_resets/:id(.:format)                    password_resets#destroy
+         jinda_index GET    /jinda(.:format)                                  jinda#index
+           new_jinda GET    /jinda/new(.:format)                              jinda#new
+                root GET    /                                                 jinda#index
+     api_v1_notes_my GET    /api/v1/notes/my(.:format)                        api/v1/notes#my
+        api_v1_notes POST   /api/v1/notes(.:format)                           api/v1/notes#create
+                     GET    /api/v1/notes(.:format)                           api/v1/notes#index
+
+Routes for Jinda::Engine:
+    article_comments GET    /articles/:article_id/comments(.:format)          jinda/comments#index
+                     POST   /articles/:article_id/comments(.:format)          jinda/comments#create
+ new_article_comment GET    /articles/:article_id/comments/new(.:format)      jinda/comments#new
+edit_article_comment GET    /articles/:article_id/comments/:id/edit(.:format) jinda/comments#edit
+     article_comment GET    /articles/:article_id/comments/:id(.:format)      jinda/comments#show
+                     PATCH  /articles/:article_id/comments/:id(.:format)      jinda/comments#update
+                     PUT    /articles/:article_id/comments/:id(.:format)      jinda/comments#update
+                     DELETE /articles/:article_id/comments/:id(.:format)      jinda/comments#destroy
+            articles GET    /articles(.:format)                               jinda/articles#index
+                     POST   /articles(.:format)                               jinda/articles#create
+         new_article GET    /articles/new(.:format)                           jinda/articles#new
+        edit_article GET    /articles/:id/edit(.:format)                      jinda/articles#edit
+             article GET    /articles/:id(.:format)                           jinda/articles#show
+                     PATCH  /articles/:id(.:format)                           jinda/articles#update
+                     PUT    /articles/:id(.:format)                           jinda/articles#update
+                     DELETE /articles/:id(.:format)                           jinda/articles#destroy
+                root GET    /                                                 jinda/articles#index
+       jinda_pending GET    /jinda/pending(.:format)                          jinda/jinda#pending
+        jinda_status GET    /jinda/status(.:format)                           jinda/jinda#status
+        jinda_search GET    /jinda/search(.:format)                           jinda/jinda#search
+           jinda_doc GET    /jinda/doc(.:format)                              jinda/jinda#doc
+     jinda_doc_print GET    /jinda/doc_print(.:format)                        jinda/jinda#doc_print
+          jinda_logs GET    /jinda/logs(.:format)                             jinda/jinda#logs
+   jinda_ajax_notice GET    /jinda/ajax_notice(.:format)                      jinda/jinda#ajax_notice
+          jinda_init GET    /jinda/init(.:format)                             jinda/jinda#init
+           jinda_run GET    /jinda/run(.:format)                              jinda/jinda#run
+      jinda_run_mail GET    /jinda/run_mail(.:format)                         jinda/jinda#run_mail
+      jinda_document GET    /jinda/document(.:format)                         jinda/jinda#document
+        jinda_run_do GET    /jinda/run_do(.:format)                           jinda/jinda#run_do
+      jinda_run_form GET    /jinda/run_form(.:format)                         jinda/jinda#run_form
+      jinda_end_form GET    /jinda/end_form(.:format)                         jinda/jinda#end_form
+  jinda_run_redirect GET    /jinda/run_redirect(.:format)                     jinda/jinda#run_redirect
+ jinda_run_direct_to GET    /jinda/run_direct_to(.:format)                    jinda/jinda#run_direct_to
+        jinda_run_if GET    /jinda/run_if(.:format)                           jinda/jinda#run_if
+    jinda_error_logs GET    /jinda/error_logs(.:format)                       jinda/jinda#error_logs
+   jinda_notice_logs GET    /jinda/notice_logs(.:format)                      jinda/jinda#notice_logs
+        jinda_cancel GET    /jinda/cancel(.:format)                           jinda/jinda#cancel
+    jinda_run_output GET    /jinda/run_output(.:format)                       jinda/jinda#run_output
+    jinda_end_output GET    /jinda/end_output(.:format)                       jinda/jinda#end_output
+                     POST   /jinda/init(.:format)                             jinda/jinda#init
+                     POST   /jinda/pending(.:format)                          jinda/jinda#index
+                     POST   /jinda/end_form(.:format)                         jinda/jinda#end_form
+                     POST   /jinda/end_output(.:format)                       jinda/jinda#end_output

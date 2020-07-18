@@ -1,0 +1,12 @@
+
+%h1= @page_title
+.content= @article.text
+
+= form_for @article, :article_id => @article.id  do |f|
+  = f.label :title, "Title"
+  = f.text_field :title, :required => true 
+  = f.label :text, "Description" 
+  = f.text_field :text, :required => true 
+  = f.label :body, "Body Content"
+  = f.text_area :body, rows: 10
+  = f.submit
